@@ -1,5 +1,36 @@
 import Link from "next/link";
 
+const experiences = [
+  {
+    company: "Haptik",
+    role: "Software Engineer",
+    previousRole: "Software Engineer Intern",
+    period: "Jan 2026 — Present",
+    location: "Mumbai, India",
+    description:
+      "Building and optimizing backend services for enterprise applications, with a focus on APIs, data, reliability, and production engineering.",
+    technologies: ["Python", "Django", "REST APIs", "MySQL", "Redis", "Elasticsearch", "Docker", "CI/CD"],
+  },
+  {
+    company: "Command Hospital, Air Force Bangalore",
+    role: "Research Intern — EEG & AI Research Contributor",
+    period: "Feb 2025 — Aug 2026",
+    location: "Bengaluru, India",
+    description:
+      "Contributed to research on automated abnormal EEG classification using deep learning and signal-processing techniques for neurological disorder assessment.",
+    technologies: ["Python", "EEGNet", "MNE-Python", "Deep Learning", "Signal Processing", "Streamlit"],
+  },
+  {
+    company: "E&ICT Academy, IIT Kanpur",
+    role: "Data Analytics & AI Intern",
+    period: "Jun 2025 — Aug 2025",
+    location: "Kanpur, India",
+    description:
+      "Completed a six-week internship and project work in Data Analytics using AI.",
+    technologies: ["Data Analytics", "AI"],
+  },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[rgb(var(--background))] text-ink">
@@ -43,8 +74,35 @@ export default function Home() {
         </section>
 
         <section id="experience" className="border-t border-line py-20">
-          <p className="font-mono text-sm uppercase tracking-[0.18em] text-accent">01 / Experience</p>
-          <div className="mt-10">Experience section coming next.</div>
+          <div className="flex items-baseline justify-between gap-8">
+            <p className="font-mono text-sm uppercase tracking-[0.18em] text-accent">01 / Experience</p>
+            <span className="font-mono text-xs text-muted">Professional history</span>
+          </div>
+
+          <div className="mt-12 divide-y divide-line">
+            {experiences.map((experience) => (
+              <article key={`${experience.company}-${experience.role}`} className="grid gap-8 py-10 first:pt-0 lg:grid-cols-[180px_minmax(0,1fr)]">
+                <div className="font-mono text-xs uppercase tracking-[0.12em] text-muted lg:pt-1">
+                  <p>{experience.period}</p>
+                  <p className="mt-2 normal-case tracking-normal">{experience.location}</p>
+                </div>
+
+                <div>
+                  <h2 className="text-2xl font-semibold tracking-tight">{experience.company}</h2>
+                  <p className="mt-2 text-lg">{experience.role}</p>
+                  {experience.previousRole && (
+                    <p className="mt-1 text-sm text-muted">Previously · {experience.previousRole}</p>
+                  )}
+                  <p className="mt-5 max-w-3xl leading-7 text-muted">{experience.description}</p>
+                  <div className="mt-5 flex max-w-3xl flex-wrap gap-x-5 gap-y-2 font-mono text-xs text-muted">
+                    {experience.technologies.map((technology) => (
+                      <span key={technology}>{technology}</span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         </section>
 
         <section id="work" className="border-t border-line py-20">
