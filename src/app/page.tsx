@@ -12,15 +12,6 @@ const experiences = [
     technologies: ["Python", "Django", "REST APIs", "MySQL", "Redis", "Elasticsearch", "Docker", "CI/CD"],
   },
   {
-    company: "Command Hospital, Air Force Bangalore",
-    role: "Research Intern — EEG & AI Research Contributor",
-    period: "Feb 2025 — Aug 2026",
-    location: "Bengaluru, India",
-    description:
-      "Contributed to research on automated abnormal EEG classification using deep learning and signal-processing techniques for neurological disorder assessment.",
-    technologies: ["Python", "EEGNet", "MNE-Python", "Deep Learning", "Signal Processing", "Streamlit"],
-  },
-  {
     company: "E&ICT Academy, IIT Kanpur",
     role: "Data Analytics & AI Intern",
     period: "Jun 2025 — Aug 2025",
@@ -106,7 +97,10 @@ export default function Home() {
         </section>
 
         <section id="work" className="border-t border-line py-20">
-          <p className="font-mono text-sm uppercase tracking-[0.18em] text-accent">02 / Selected Work</p>
+          <div className="flex items-baseline justify-between gap-8">
+            <p className="font-mono text-sm uppercase tracking-[0.18em] text-accent">02 / Selected Work</p>
+            <span className="font-mono text-xs text-muted">Projects &amp; research</span>
+          </div>
           <div className="mt-10">Selected projects coming next.</div>
         </section>
 
