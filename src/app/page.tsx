@@ -7,8 +7,7 @@ const experiences = [
     previousRole: "Software Engineer Intern",
     period: "Jan 2026 — Present",
     location: "Mumbai, India",
-    description:
-      "Building and optimizing backend services for enterprise applications, with a focus on APIs, data, reliability, and production engineering.",
+    description: "Building and optimizing backend services for enterprise applications, with a focus on APIs, data, reliability, and production engineering.",
     technologies: ["Python", "Django", "REST APIs", "MySQL", "Redis", "Elasticsearch", "Docker", "CI/CD"],
   },
   {
@@ -16,8 +15,7 @@ const experiences = [
     role: "Data Analytics & AI Intern",
     period: "Jun 2025 — Aug 2025",
     location: "Kanpur, India",
-    description:
-      "Completed a six-week internship and project work in Data Analytics using AI.",
+    description: "Completed a six-week internship and project work in Data Analytics using AI.",
     technologies: ["Data Analytics", "AI"],
   },
 ];
@@ -27,23 +25,21 @@ const projects = [
     number: "01",
     title: "Abnormal EEG Classification",
     type: "Research / Final-year project",
-    description:
-      "Two-year research collaboration with Command Hospital, Air Force Bangalore, focused on automated abnormal EEG classification using deep learning and signal-processing techniques.",
+    description: "Two-year research collaboration with Command Hospital, Air Force Bangalore, focused on automated abnormal EEG classification using deep learning and signal-processing techniques.",
     details: [
       "Built EEGNet-based pipelines for normal vs abnormal EEG detection using the TUH EEG Corpus.",
       "Developed a multi-input framework combining raw EEG with handcrafted spectral and non-linear features.",
       "Implemented MNE-Python preprocessing, memory-efficient incremental training, ensemble prediction, and a Streamlit visualization interface.",
     ],
     technologies: ["Python", "EEGNet", "MNE-Python", "Deep Learning", "Signal Processing", "Streamlit"],
-    linkLabel: "FICTA publication ↗",
-    link: "#publication",
+    linkLabel: "GitHub ↗",
+    link: "https://github.com/harshitabatta",
   },
   {
     number: "02",
     title: "Fault-Tolerant 3D Printer Orchestration",
     type: "Distributed systems",
-    description:
-      "A distributed 3D printer management platform designed around fault-tolerant coordination and consistent state across nodes.",
+    description: "A distributed 3D printer management platform designed around fault-tolerant coordination and consistent state across nodes.",
     details: [
       "Implemented the Raft consensus algorithm for leader election and replicated log handling.",
       "Designed backend services for printer management, filament inventory, and print-job orchestration through REST APIs.",
@@ -57,8 +53,7 @@ const projects = [
     number: "03",
     title: "LLM Interview Intelligence Platform",
     type: "AI / NLP",
-    description:
-      "An AI-driven mock interview platform for personalized question generation and real-time response analysis.",
+    description: "An AI-driven mock interview platform for personalized question generation and real-time response analysis.",
     details: [
       "Implemented NLP preprocessing, Retrieval-Augmented Generation, and LoRA-based optimization techniques.",
       "Used semantic analysis and contextual ranking to improve response evaluation quality.",
@@ -72,8 +67,7 @@ const projects = [
     number: "04",
     title: "Gesture-Controlled Assistive Robotics",
     type: "Computer vision / Simulation",
-    description:
-      "A real-time robotic arm simulation for assistive cooking operations including stirring, pouring, and flipping.",
+    description: "A real-time robotic arm simulation for assistive cooking operations including stirring, pouring, and flipping.",
     details: [
       "Integrated MediaPipe hand tracking with inverse kinematics for robotic motion control.",
       "Used PyBullet to simulate realistic robotic interactions and physics.",
@@ -150,13 +144,9 @@ export default function Home() {
                   </ul>
                   <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs text-muted">{project.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div>
                 </div>
-                <a href={project.link} target={project.link.startsWith("http") ? "_blank" : undefined} rel={project.link.startsWith("http") ? "noreferrer" : undefined} className="self-start text-sm transition-colors hover:text-accent lg:pt-6">{project.linkLabel}</a>
+                <a href={project.link} target="_blank" rel="noreferrer" className="self-start text-sm transition-colors hover:text-accent lg:pt-6">{project.linkLabel}</a>
               </article>
             ))}
-          </div>
-          <div id="publication" className="mt-4 border-t border-line pt-8 text-sm text-muted">
-            <span className="font-mono text-xs uppercase tracking-[0.14em] text-accent">Publication</span>
-            <p className="mt-3 max-w-3xl"><span className="font-medium text-ink">Classification of Abnormalities in EEG Recordings</span> — International Conference on Frontiers of Intelligent Computing Theory and Applications (FICTA), Mar 2026.</p>
           </div>
         </section>
 
