@@ -2,12 +2,11 @@ import Link from "next/link";
 
 const experiences = [
   {
-    company: "Haptik",
-    role: "Software Engineer",
-    previousRole: "Software Engineer Intern",
+    company: "Jio Haptik Technologies Limited",
+    role: "Software Engineering Intern",
     period: "Jan 2026 — Present",
     location: "Mumbai, India",
-    description: "Building and optimizing backend services for enterprise applications, with a focus on APIs, data, reliability, and production engineering.",
+    description: "Developing and optimizing backend services using Python and Django for scalable enterprise-grade applications supporting production workflows and customer-facing features.",
     technologies: ["Python", "Django", "REST APIs", "MySQL", "Redis", "Elasticsearch", "Docker", "CI/CD"],
   },
   {
@@ -37,42 +36,43 @@ const projects = [
   },
   {
     number: "02",
-    title: "Fault-Tolerant 3D Printer Orchestration",
+    title: "Fault-Tolerant Distributed 3D Printer Orchestration System",
     type: "Distributed systems",
-    description: "A distributed 3D printer management platform designed around fault-tolerant coordination and consistent state across nodes.",
+    description: "Engineered a distributed 3D printer management platform implementing the Raft consensus algorithm for fault-tolerant coordination across nodes.",
     details: [
-      "Implemented the Raft consensus algorithm for leader election and replicated log handling.",
-      "Designed backend services for printer management, filament inventory, and print-job orchestration through REST APIs.",
-      "Integrated Firebase persistence for synchronized state and fault recovery.",
+      "Designed backend services to manage printers, filament inventory, and print job orchestration using REST APIs.",
+      "Implemented leader election, replicated log handling, and consistency validation mechanisms to improve distributed system reliability.",
+      "Integrated Firebase persistence to maintain synchronized state and improve fault recovery.",
     ],
-    technologies: ["Python", "Raft", "Firebase", "REST APIs", "Distributed Systems"],
+    technologies: ["Python", "Firebase", "REST APIs", "Raft", "Distributed Systems"],
     linkLabel: "GitHub ↗",
     link: "https://github.com/harshitabatta",
   },
   {
     number: "03",
-    title: "LLM Interview Intelligence Platform",
+    title: "LLM-based Interview Intelligence Platform",
     type: "AI / NLP",
-    description: "An AI-driven mock interview platform for personalized question generation and real-time response analysis.",
+    description: "Built an AI-driven mock interview platform with personalized question generation and real-time response analysis.",
     details: [
-      "Implemented NLP preprocessing, Retrieval-Augmented Generation, and LoRA-based optimization techniques.",
-      "Used semantic analysis and contextual ranking to improve response evaluation quality.",
-      "Reached 93% retrieval accuracy and 91.8% voice-input accuracy during testing.",
+      "Implemented NLP preprocessing pipelines, Retrieval-Augmented Generation (RAG), and LoRA-based optimization techniques.",
+      "Achieved 93% retrieval accuracy and 91.8% voice input accuracy during testing.",
+      "Improved response evaluation quality through semantic analysis and contextual ranking mechanisms.",
     ],
-    technologies: ["Python", "NLP", "RAG", "LoRA", "Semantic Analysis"],
+    technologies: ["Python", "NLP", "RAG", "LoRA", "HTML", "CSS"],
     linkLabel: "GitHub ↗",
     link: "https://github.com/harshitabatta",
   },
   {
     number: "04",
-    title: "Gesture-Controlled Assistive Robotics",
+    title: "Real-Time Gesture-Controlled Assistive Robotics Simulation",
     type: "Computer vision / Simulation",
-    description: "A real-time robotic arm simulation for assistive cooking operations including stirring, pouring, and flipping.",
+    description: "Developed a gesture-controlled robotic arm simulation for assistive cooking operations, including stirring, pouring, and flipping.",
     details: [
-      "Integrated MediaPipe hand tracking with inverse kinematics for robotic motion control.",
-      "Used PyBullet to simulate realistic robotic interactions and physics.",
+      "Integrated MediaPipe-based real-time hand tracking with inverse kinematics for robotic motion control.",
+      "Simulated realistic robotic interactions using PyBullet physics environments.",
+      "Improved gesture recognition responsiveness and interaction accuracy for real-time control flows.",
     ],
-    technologies: ["Python", "MediaPipe", "PyBullet", "Computer Vision", "Inverse Kinematics"],
+    technologies: ["Python", "MediaPipe", "PyBullet"],
     linkLabel: "GitHub ↗",
     link: "https://github.com/harshitabatta",
   },
@@ -117,7 +117,6 @@ export default function Home() {
                 <div>
                   <h2 className="text-2xl font-semibold tracking-tight">{experience.company}</h2>
                   <p className="mt-2 text-lg">{experience.role}</p>
-                  {experience.previousRole && <p className="mt-1 text-sm text-muted">Previously · {experience.previousRole}</p>}
                   <p className="mt-5 max-w-3xl leading-7 text-muted">{experience.description}</p>
                   <div className="mt-5 flex max-w-3xl flex-wrap gap-x-5 gap-y-2 font-mono text-xs text-muted">{experience.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div>
                 </div>
@@ -154,16 +153,13 @@ export default function Home() {
           <div className="max-w-4xl">
             <p className="font-mono text-sm uppercase tracking-[0.18em] text-accent">03 / Contact</p>
             <h2 className="mt-6 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">Let&apos;s talk.</h2>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
-              For software engineering opportunities, technical collaborations, or a conversation about the work above.
-            </p>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">For software engineering opportunities, technical collaborations, or a conversation about the work above.</p>
             <div className="mt-8 flex flex-wrap gap-3 text-sm">
               <a href="https://www.linkedin.com/in/harshita-batta/" target="_blank" rel="noreferrer" className="rounded-full bg-accent px-5 py-2.5 font-medium text-white transition-colors hover:bg-accent-strong">LinkedIn ↗</a>
               <a href="https://github.com/harshitabatta" target="_blank" rel="noreferrer" className="rounded-full border border-line px-5 py-2.5 transition-colors hover:border-accent hover:text-accent">GitHub ↗</a>
             </div>
           </div>
         </section>
-
         <footer className="border-t border-line py-8 text-sm text-muted">© 2026 Harshita Batta</footer>
       </div>
     </main>
