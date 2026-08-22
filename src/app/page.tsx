@@ -150,10 +150,20 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="border-t border-line py-20">
-          <p className="font-mono text-sm uppercase tracking-[0.18em] text-accent">03 / Contact</p>
-          <h2 className="mt-6 text-3xl font-semibold tracking-tight">Let&apos;s build something.</h2>
+        <section id="contact" className="border-t border-line py-24">
+          <div className="max-w-4xl">
+            <p className="font-mono text-sm uppercase tracking-[0.18em] text-accent">03 / Contact</p>
+            <h2 className="mt-6 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">Let&apos;s talk.</h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
+              For software engineering opportunities, technical collaborations, or a conversation about the work above.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3 text-sm">
+              <a href="https://www.linkedin.com/in/harshita-batta/" target="_blank" rel="noreferrer" className="rounded-full bg-accent px-5 py-2.5 font-medium text-white transition-colors hover:bg-accent-strong">LinkedIn ↗</a>
+              <a href="https://github.com/harshitabatta" target="_blank" rel="noreferrer" className="rounded-full border border-line px-5 py-2.5 transition-colors hover:border-accent hover:text-accent">GitHub ↗</a>
+            </div>
+          </div>
         </section>
+
         <footer className="border-t border-line py-8 text-sm text-muted">© 2026 Harshita Batta</footer>
       </div>
     </main>
