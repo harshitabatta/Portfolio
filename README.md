@@ -10,4 +10,11 @@ Personal portfolio website for Harshita Batta, Software Engineer.
 - Clean, professional visual design
 - Forest green accent palette
 
-Built with Next.js, TypeScript, and Tailwind CSS.
+## Stack
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Lucide React
+
+Built to be deployed at `harshi.xyz`.
