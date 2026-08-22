@@ -15,14 +15,14 @@ export default function Home() {
           </nav>
         </header>
 
-        <section id="top" className="grid min-h-[72vh] items-center gap-16 py-20 lg:grid-cols-[minmax(0,1fr)_280px] lg:py-24">
-          <div className="max-w-4xl">
+        <section id="top" className="flex min-h-[72vh] items-center py-20 lg:py-24">
+          <div className="max-w-5xl">
             <p className="mb-6 font-mono text-sm uppercase tracking-[0.18em] text-accent">Software Engineer</p>
-            <h1 className="text-5xl font-semibold leading-[0.98] tracking-[-0.05em] sm:text-7xl lg:text-[5.5rem]">
+            <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-[-0.05em] sm:text-6xl lg:text-[5rem]">
               I build backend systems and production software.
             </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-muted">
-              Backend engineering, distributed systems, and applied AI — with a focus on building reliable software that works in production.
+            <p className="mt-8 max-w-3xl text-lg leading-8 text-muted">
+              Backend engineering, distributed systems, and applied AI — building reliable software from APIs to production infrastructure.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3 text-sm">
@@ -40,24 +40,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-
-          <aside className="hidden border-l border-line pl-8 lg:block">
-            <div className="space-y-8 text-sm">
-              <div>
-                <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted">Currently</p>
-                <p className="mt-2 font-medium">Software Engineer</p>
-                <p className="mt-1 text-muted">Haptik</p>
-              </div>
-              <div>
-                <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted">Focus</p>
-                <p className="mt-2 text-muted">Backend systems<br />APIs &amp; infrastructure<br />Applied AI</p>
-              </div>
-              <div>
-                <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted">Based in</p>
-                <p className="mt-2 font-medium">India</p>
-              </div>
-            </div>
-          </aside>
         </section>
 
         <section id="experience" className="border-t border-line py-20">
