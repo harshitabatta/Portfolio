@@ -33,8 +33,8 @@ export default function Home() {
       <div className="mx-auto max-w-6xl px-6 py-8 sm:px-8 lg:px-10">
         <header className="flex items-center justify-between border-b border-line pb-6">
           <Link href="#top" className="font-medium tracking-tight">HARSHITA BATTA</Link>
-          <div className="flex items-center gap-5">
-            <nav className="hidden items-center gap-6 text-sm text-muted sm:flex">
+          <div className="hidden items-center gap-5 sm:flex">
+            <nav className="flex items-center gap-6 text-sm text-muted">
               <Link href="#experience" className="transition-colors hover:text-accent">Experience</Link>
               <Link href="#work" className="transition-colors hover:text-accent">Work</Link>
               <Link href="#contact" className="transition-colors hover:text-accent">Contact</Link>
@@ -43,11 +43,11 @@ export default function Home() {
           </div>
           <details className="relative sm:hidden">
             <summary className="list-none cursor-pointer rounded-full border border-line px-3 py-2 text-sm leading-none">Menu</summary>
-            <nav className="absolute right-0 z-10 mt-2 w-36 rounded-lg border border-line bg-[rgb(var(--background))] p-2 shadow-lg">
+            <nav className="absolute right-0 z-10 mt-2 w-40 rounded-lg border border-line bg-[rgb(var(--background))] p-2 shadow-lg">
               <Link href="#experience" className="block rounded px-3 py-2 text-sm text-muted hover:text-accent">Experience</Link>
               <Link href="#work" className="block rounded px-3 py-2 text-sm text-muted hover:text-accent">Work</Link>
               <Link href="#contact" className="block rounded px-3 py-2 text-sm text-muted hover:text-accent">Contact</Link>
-              <div className="px-3 py-2"><ThemeToggle /></div>
+              <div className="mt-1 border-t border-line px-3 pt-2"><ThemeToggle /></div>
             </nav>
           </details>
         </header>
