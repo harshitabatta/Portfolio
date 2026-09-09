@@ -4,7 +4,7 @@ import ThemeToggle from "./ThemeToggle";
 const experiences = [
   {
     company: "Jio Haptik Technologies Limited",
-    role: "Software Engineering Intern",
+    role: "Software Development Engineer - L1",
     period: "Jan 2026 — Present",
     location: "Mumbai, India",
     description: "Developing and optimizing backend services using Python and Django for scalable enterprise-grade applications supporting production workflows and customer-facing features.",
