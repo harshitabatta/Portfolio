@@ -8,6 +8,18 @@ const experiences = [
     period: "Jan 2026 — Present",
     location: "Mumbai, India",
     description: "Developing and optimizing backend services using Python and Django for scalable enterprise-grade applications supporting production workflows and customer-facing features.",
+    details: [
+      "Developing and optimizing backend services using Python and Django for scalable enterprise-grade applications supporting production workflows and customer-facing features.",
+      "Contributing to REST API development, backend integrations, and feature deployments across high-velocity product engineering cycles.",
+      "Working with MySQL for backend data management, query optimization, schema handling, and application-level performance improvements.",
+      "Supporting production debugging, root cause analysis, and issue resolution to improve platform reliability, operational stability, and release quality.",
+      "Collaborating closely with Product, QA, DevOps, and Client Engineering teams to deliver production-ready features and accelerate engineering execution.",
+      "Assisting in implementing CI/CD workflows, deployment automation practices, and secure coding standards within agile engineering environments.",
+      "Working with distributed systems tools including Redis, Docker, and Elasticsearch across backend service workflows.",
+      "Supporting observability and monitoring initiatives for backend systems processing sensitive and personally identifiable information (PII).",
+      "Participating in backend architecture and scalability discussions involving performance optimization, service reliability, and maintainability improvements.",
+      "Operating within fast-paced agile development cycles with strong ownership, cross-functional collaboration, and production-focused execution.",
+    ],
     technologies: ["Python", "Django", "REST APIs", "MySQL", "Redis", "Elasticsearch", "Docker", "CI/CD"],
   },
   {
@@ -68,7 +80,7 @@ export default function Home() {
 
         <section id="experience" className="border-t border-line py-20">
           <div className="flex items-baseline justify-between gap-8"><p className="font-mono text-sm uppercase tracking-[0.18em] text-accent">01 / Experience</p><span className="font-mono text-xs text-muted">Professional history</span></div>
-          <div className="mt-12 divide-y divide-line">{experiences.map((experience) => <article key={`${experience.company}-${experience.role}`} className="grid gap-8 py-10 first:pt-0 lg:grid-cols-[180px_minmax(0,1fr)]"><div className="font-mono text-xs uppercase tracking-[0.12em] text-muted lg:pt-1"><p>{experience.period}</p><p className="mt-2 normal-case tracking-normal">{experience.location}</p></div><div><h2 className="text-2xl font-semibold tracking-tight">{experience.company}</h2><p className="mt-2 text-lg">{experience.role}</p><p className="mt-5 max-w-3xl leading-7 text-muted">{experience.description}</p><div className="mt-5 flex max-w-3xl flex-wrap gap-x-5 gap-y-2 font-mono text-xs text-muted">{experience.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div></div></article>)}</div>
+          <div className="mt-12 divide-y divide-line">{experiences.map((experience) => <article key={`${experience.company}-${experience.role}`} className="grid gap-8 py-10 first:pt-0 lg:grid-cols-[180px_minmax(0,1fr)]"><div className="font-mono text-xs uppercase tracking-[0.12em] text-muted lg:pt-1"><p>{experience.period}</p><p className="mt-2 normal-case tracking-normal">{experience.location}</p></div><div><h2 className="text-2xl font-semibold tracking-tight">{experience.company}</h2><p className="mt-2 text-lg">{experience.role}</p><p className="mt-5 max-w-3xl leading-7 text-muted">{experience.description}</p>{experience.details && <ul className="mt-5 max-w-4xl space-y-2 text-sm leading-6 text-muted">{experience.details.map((detail) => <li key={detail} className="flex gap-3"><span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent"/><span>{detail}</span></li>)}</ul>}<div className="mt-6 flex max-w-4xl flex-wrap gap-x-5 gap-y-2 font-mono text-xs text-muted">{experience.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div></div></article>)}</div>
         </section>
 
         <section id="work" className="border-t border-line py-20">
