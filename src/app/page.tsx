@@ -7,7 +7,6 @@ const experiences = [
     role: "Software Development Engineer - L1",
     period: "Jan 2026 — Present",
     location: "Mumbai, India",
-    description: "Developing and optimizing backend services using Python and Django for scalable enterprise-grade applications supporting production workflows and customer-facing features.",
     details: [
       "Developing and optimizing backend services using Python and Django for scalable enterprise-grade applications supporting production workflows and customer-facing features.",
       "Contributing to REST API development, backend integrations, and feature deployments across high-velocity product engineering cycles.",
