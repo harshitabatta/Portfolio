@@ -26,8 +26,16 @@ const experiences = [
     role: "Data Analytics & AI Intern",
     period: "Jun 2025 — Aug 2025",
     location: "Kanpur, India",
-    description: "Completed a six-week internship and project work in Data Analytics using AI.",
-    technologies: ["Data Analytics", "AI"],
+    description: "Completed a six-week internship focused on applying machine learning and AI techniques to a practical house-price prediction and deployment project.",
+    details: [
+      "Developed a machine learning-based house-price prediction application using a trained model and a reusable preprocessing pipeline.",
+      "Built a Flask REST API that accepts property details, processes the input data, and returns predicted house prices in JSON format.",
+      "Integrated Hugging Face's BART-large-CNN model to generate concise, natural-language summaries of predicted property details.",
+      "Packaged the prediction workflow with Python, pandas, joblib, and environment-based configuration for deployment-oriented execution.",
+    ],
+    technologies: ["Python", "Machine Learning", "Flask", "REST APIs", "Pandas", "Hugging Face", "BART", "Joblib"],
+    linkLabel: "GitHub ↗",
+    link: "https://github.com/harshitabatta/house-price-deployment",
   },
 ];
 
@@ -79,7 +87,7 @@ export default function Home() {
 
         <section id="experience" className="border-t border-line py-20">
           <div className="flex items-baseline justify-between gap-8"><p className="font-mono text-sm uppercase tracking-[0.18em] text-accent">01 / Experience</p><span className="font-mono text-xs text-muted">Professional history</span></div>
-          <div className="mt-12 divide-y divide-line">{experiences.map((experience) => <article key={`${experience.company}-${experience.role}`} className="grid gap-8 py-10 first:pt-0 lg:grid-cols-[180px_minmax(0,1fr)]"><div className="font-mono text-xs uppercase tracking-[0.12em] text-muted lg:pt-1"><p>{experience.period}</p><p className="mt-2 normal-case tracking-normal">{experience.location}</p></div><div><h2 className="text-2xl font-semibold tracking-tight">{experience.company}</h2><p className="mt-2 text-lg">{experience.role}</p>{experience.description && <p className="mt-5 max-w-3xl leading-7 text-muted">{experience.description}</p>}{experience.details && <ul className="mt-5 max-w-4xl space-y-2 text-sm leading-6 text-muted">{experience.details.map((detail) => <li key={detail} className="flex gap-3"><span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent"/><span>{detail}</span></li>)}</ul>}<div className="mt-6 flex max-w-4xl flex-wrap gap-x-5 gap-y-2 font-mono text-xs text-muted">{experience.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div></div></article>)}</div>
+          <div className="mt-12 divide-y divide-line">{experiences.map((experience) => <article key={`${experience.company}-${experience.role}`} className="grid gap-8 py-10 first:pt-0 lg:grid-cols-[180px_minmax(0,1fr)]"><div className="font-mono text-xs uppercase tracking-[0.12em] text-muted lg:pt-1"><p>{experience.period}</p><p className="mt-2 normal-case tracking-normal">{experience.location}</p></div><div><div className="flex flex-wrap items-start justify-between gap-4"><div><h2 className="text-2xl font-semibold tracking-tight">{experience.company}</h2><p className="mt-2 text-lg">{experience.role}</p></div>{experience.link && <a href={experience.link} target="_blank" rel="noreferrer" className="text-sm transition-colors hover:text-accent">{experience.linkLabel}</a>}</div>{experience.description && <p className="mt-5 max-w-3xl leading-7 text-muted">{experience.description}</p>}{experience.details && <ul className="mt-5 max-w-4xl space-y-2 text-sm leading-6 text-muted">{experience.details.map((detail) => <li key={detail} className="flex gap-3"><span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent"/><span>{detail}</span></li>)}</ul>}<div className="mt-6 flex max-w-4xl flex-wrap gap-x-5 gap-y-2 font-mono text-xs text-muted">{experience.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div></div></article>)}</div>
         </section>
 
         <section id="work" className="border-t border-line py-20">
