@@ -1,0 +1,29 @@
+# Harshita Batta
+
+## About
+
+Harshita Batta is a Software Engineer focused on backend engineering,
+distributed systems, and AI/ML.
+
+## Website
+
+- Portfolio: https://harshi.xyz
+- Resume: https://harshi.xyz/Harshita_Batta_Resume.pdf
+- GitHub: https://github.com/harshitabatta
+- LinkedIn: https://www.linkedin.com/
+
+## Technical Focus
+
+- Python
+- Django
+- REST APIs
+- Backend Engineering
+- Distributed Systems
+- AI/ML
+- SQL and NoSQL Databases
+- Docker and CI/CD
+
+## Portfolio Sections
+
+The website contains information about Harshita's professional experience,
+technical projects, skills, resume, and contact information.
