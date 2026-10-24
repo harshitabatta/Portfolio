@@ -39,38 +39,6 @@ Project descriptions and links are available on the [live portfolio](https://har
 - **Icons:** Lucide React
 - **Deployment:** GitHub Pages using a Next.js static export and GitHub Actions
 
-## Run locally
-
-### Prerequisites
-
-- Node.js 22 or a compatible supported version
-- npm
-
-### Setup
-
-```bash
-git clone https://github.com/harshitabatta/Portfolio.git
-cd Portfolio
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Available scripts
-
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the local development server |
-| `npm run build` | Build the site for production and generate the static export |
-| `npm run start` | Start the Next.js production server where supported |
-
-## Deployment
-
-The site is configured for static export and deployed to GitHub Pages through the workflow in `.github/workflows/deploy.yml`. Pushes to the `build/foundation` branch trigger the deployment workflow.
-
-The custom domain is [https://harshi.xyz](https://harshi.xyz).
-
 ## Connect
 
 - **Portfolio:** [harshi.xyz](https://harshi.xyz)
